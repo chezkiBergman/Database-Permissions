@@ -160,7 +160,7 @@ async function importUsers(objUser) {
             break;
 
     }
-  console.log($('#ataTableFromApi').DataTable().context[0].sTableId); 
+ 
     addUser();
     btnDeleteUser(dashboard, objUser)
     btnEditUser(dashboard, objUser)

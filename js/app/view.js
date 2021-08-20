@@ -1,10 +1,12 @@
 function init() {
   var main = document.getElementById("main");
   console.log(main);
-  main.style.textAlign = `center`
-  main.style.marginTop = `50px`
-  // <input type="text" id="userNameVal">
-  // <button id="inYourName">Enter Your Name </button>
+  main.style.textAlign = 'center';
+  main.style.display = 'flex';
+  main.style.alignItems = 'center';
+  main.style.minHeight= '100vh'
+    
+}
   main.innerHTML = `
 <div class="input-group w-50 mx-auto" style="width: 200px">
   <div class="input-group-prepend">
@@ -12,9 +14,9 @@ function init() {
   </div>
   <input  placeholder="Enter Your Name" type="text" id="userNameVal" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
 </div>`
-}
-function passwordTable() {
 
+function passwordTable() {
+  $('#main').css('display','block')
   main.innerHTML = 
     `<div id="removeLater"><h1 style="margin: 3%;">Enter Your Password</h1>
     <div id="buttons" style="margin: 0 auto;" >
@@ -56,62 +58,7 @@ var table;
  
  
   function showDashboard() {
-    // main.innerHTML =`
-    // // <form id="register" style="padding: 0 450px" >
-    // // <div class="mb-3">
-    // //   <label for="fName" class="form-label">First Name</label>
-    // //   <input required
-    // //     type="text"
-    // //     class="form-control"
-    // //     id="fName"
-    // //     name="fName"
-    // //   />
-    // // </div>
-    // // <div class="mb-3">
-    // //   <label for="lName" class="form-label">Last Name</label>
-    // //   <input required
-    // //     type="text"
-    // //     class="form-control"
-    // //     id="lName"
-    // //     name="lName"
-    // //   />
-    // // </div>
-    // // <div class="mb-3">
-    // //   <label for="userName" class="form-label"
-    // //     >userName</label
-    // //   >
-    // //   <input required
-    // //     type="text"
-    // //     class="form-control"
-    // //     id="userName"
-    // //     aria-describedby="emailHelp"
-    // //     name="userName"
-    // //   />
-    // //   <div class="mb-3">
-    // //   <label for="role" class="form-label"
-    // //     >userName</label
-    // //   >
-    // //   <input required
-    // //     type="text"
-    // //     class="form-control"
-    // //     id="role"
-    // //     aria-describedby="emailHelp"
-    // //     name="role"
-    // //   />
-    // //   <div id="role" class="form-text">
-       
-    // //   </div>
-    // // </div>
-    // //     <div class="mb-3">
-    // //     <label for="exampleInputPassword1" class="form-label"
-    // //     >Password</label>
-  
-    // //     <input required type="password"
-    // //      class="form-control" id="password" name="password" />
-    // //       </div>
-    // //       <input type="submit" value="Create My Account"/>
-    // //       </form> 
-    //       `;
+    $('#main').css('alignItems','')
   main.parentElement.style.backgroundColor = "cornsilk";
   main.style.display = 'flex'
   main.style.justifyContent = 'space-around';
@@ -185,7 +132,7 @@ var table;
    
   $("body").prepend(`<div class='container' style="text-align: center;
   background-color: aquamarine;
-  height: 100px;" ><h1 style="padding: 2%;">DASHBOARD</h1></div>`)
+  height: 100px; margin-bottom:10px;" ><h1 style="padding: 2%;">DASHBOARD</h1></div>`)
   main.parentElement.style.backgroundColor = "cornsilk";
   table = document.createElement("table")
   

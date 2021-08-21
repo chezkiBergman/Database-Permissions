@@ -5,7 +5,7 @@ function init() {
   main.style.display = 'flex';
   main.style.alignItems = 'center';
   main.style.minHeight= '100vh'
-    
+  main.style.backgroundColor="cornsilk"
 }
   main.innerHTML = `
 <div class="input-group w-50 mx-auto" style="width: 200px">
@@ -18,7 +18,7 @@ function init() {
 function passwordTable() {
   $('#main').css('display','block')
   main.innerHTML = 
-    `<div id="removeLater"><h1 style="margin: 3%;">Enter Your Password</h1>
+    `<div id="removeLater"><div style="background-color: darkseagreen; margin-bottom: 2%;"><h1 style="padding: 5px;">Enter Your Password</h1><i style="font-size: x-large;" class="fas fa-angle-double-down"></i></div>
     <div id="buttons" style="margin: 0 auto;" >
                 <div class="btn-group" style="width: 20%;" >
                         <button id="1" type="button" style="border-radius: 33px;" class="num btn btn-outline-primary p-3 m-2 btn-lg" >1</button>
@@ -59,7 +59,7 @@ var table;
  
   function showDashboard() {
     $('#main').css('alignItems','')
-  main.parentElement.style.backgroundColor = "cornsilk";
+  
   main.style.display = 'flex'
   main.style.justifyContent = 'space-around';
   main.innerHTML = `<form style="margin-top: 50px;" id="register" >
@@ -130,9 +130,23 @@ var table;
 
   function creatTable(){
    
-  $("body").prepend(`<div class='container' style="text-align: center;
+  $("body").prepend(`<div id="dashboard" class='container' style="text-align: center;
   background-color: aquamarine;
   height: 100px; margin-bottom:10px;" ><h1 style="padding: 2%;">DASHBOARD</h1></div>`)
+  $("body #dashboard").mouseenter(
+    function(){
+      $(this).animate({opacity: 0.5}, 1000)
+    });
+  $("body #dashboard").mouseleave(
+    function() {
+      $(this).animate({opacity: 1}, 1000)
+    });
+// console.log(  $('body #dashboard').mouseover((function(){ $('body #dashboard').animate({ backgroundColor: 'red'},'slow') })));
+      $('div h1').animate({fontSize: '3em'},600);
+   
+     
+  
+
   main.parentElement.style.backgroundColor = "cornsilk";
   table = document.createElement("table")
   
